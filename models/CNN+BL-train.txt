@@ -1,0 +1,15 @@
+//1. Create the model
+//2. Run the following post model initialization- 
+//  a. additional script file
+//  b. directly paste it in the jupyter notebook for the project
+
+
+callback = tf.keras.callbacks.ModelCheckpoint('CNN+Bi-LSTM.hdf5', monitor='val_loss', save_best_only=True, verbose=1)
+
+model.fit(X_train, y_train,
+               batch_size=2048,
+               verbose=2,
+               callbacks=[callback],
+               epochs=200,
+               shuffle=True,
+               validation_data=(X_val, y_val),)
