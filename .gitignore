@@ -1,2 +1,7 @@
-EXPT_NASDAQ/
 .DS_Store
+EXPT_NASDAQ/
+Example_Notebooks/
+MLP1/
+MLP2/
+CNN-LSTM/
+config/
