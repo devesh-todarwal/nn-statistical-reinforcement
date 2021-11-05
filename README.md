@@ -75,9 +75,6 @@ We now integrate Moving Average as an additional feature ->
 4. Moving Average + CNN + Bi-LSTM
 ![image](src/ma+cnn+bl.png)
 
-It seems that the right and left tail of the stock return distribution are not derivable from price data alone.
-
-I do have the following **hypotheses** that provide more room for investigation and might lead to better results.
 ***
 
 ## Results
@@ -116,10 +113,11 @@ Following are the key results from all the experiments conducted.
 
 Based on the outputs of the various models, the following conclusions can be made ->
 
-- The rugged nature of the stock returns makes the networks interpret the distribution tails as semi-random thus significantly marring the prediction performance.
-- This issue is dealt with elegantly by the addition of moving average as a feature to the input data.
-- The predictions for the Bi-LSTM and CNN+Bi-LSTM models predicted the trend of the movement rather than the actual price and hence, the stats are slightly misleading in terms of model performance.
-- More price data is needed to derive temporal dependencies of the time series and get a better understanding of the distribution tails.
-- When applying a moving average effect to a time series your dataset represent the real market less accurately. Subsequently, the dataset is biased towards less outliers.
-- Slight smoothing of the time series improved the error rates substantially for the Bi-LSTM and CNN+Bi-LSTM models. It is a good thing to consider for future research.
-- Up next, we'll be looking for other prediction indicators which will be adding to the model's performance. 
+1. The rugged nature of the stock returns makes the networks interpret the distribution tails as semi-random thus significantly marring the prediction performance.
+2. This issue is dealt with elegantly by the addition of moving average as a feature to the input data.
+3. However, it seems that the right and left tail of the stock return distribution are not derivable from price data alone.
+4. The predictions for the Bi-LSTM and CNN+Bi-LSTM models predicted the trend of the movement rather than the actual price and hence, the stats are slightly misleading in terms of model performance.
+5. More price data is needed to derive temporal dependencies of the time series and get a better understanding of the distribution tails.
+6. When applying a moving average effect to a time series your dataset represent the real market less accurately. Subsequently, the dataset is biased towards less outliers.
+7. Slight smoothing of the time series improved the error rates substantially for the Bi-LSTM and CNN+Bi-LSTM models. It is a good thing to consider for future research.
+8. Up next, we'll be looking for other prediction indicators which will be adding to the model's performance.
