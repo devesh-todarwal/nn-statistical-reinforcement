@@ -1,10 +1,9 @@
 # nn-statistical-reinforcement
 Reinforcing Sequential Neural Networks with statistical indicators including.
 
-[x] Moving Average
-[ ] Moving Average Convergence Divergence
-[ ] Relative Strength Index
-[ ] 
+* [x] Moving Average
+* [ ] Moving Average Convergence Divergence
+* [ ] Relative Strength Index 
 
 ***
 
